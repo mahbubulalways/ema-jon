@@ -7,7 +7,7 @@ const Order = (props) => {
     const {cart}=props
   
 
-   
+
     let total=0 
     let shipping=0
 for(const singleCard of cart){
