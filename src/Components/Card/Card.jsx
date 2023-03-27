@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Card = (props) => {
-    console.log(props.product);
+   
     const {img,name,price,ratings,seller,}=props.product
-    return (
+  const hendlerAdd=props.hendlerAdd
+    return ( 
         <div>
             <div className="card w-full h-full bg-base-100 shadow-xl border border-gray-400">
   <figure><img className='p-2 rounded-2xl' src={img} alt="Shoes" /></figure>
@@ -18,7 +19,7 @@ const Card = (props) => {
     </div>
     
   </div>
-  <button>
+  <button onClick={()=>hendlerAdd(props.product)}>
   <div className='flex gap-3 border-t-1 rounded-br-xl rounded-bl-xl border-gray-400 bg-gray-700 text-white justify-center items-center  w-full '>
       <div>
       <button className="w-full rounded-sm py-2 font-semibold">Add to Cart
